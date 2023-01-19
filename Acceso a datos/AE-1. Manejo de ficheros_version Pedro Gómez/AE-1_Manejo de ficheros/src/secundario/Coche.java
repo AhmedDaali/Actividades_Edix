@@ -2,12 +2,13 @@ package secundario;
 
 public class Coche {
 	private int id;
-    private String matricula, modelo, color;
+    private String matricula, modelo, marca, color;
 
-    public Coche(int id, String matricula, String modelo, String color){
+    public Coche(int id, String matricula, String marca, String modelo, String color){
         this.id = id;
         this.matricula = matricula;
         this.modelo = modelo;
+        this.marca = marca;
         this.color = color;
     }
 
@@ -27,10 +28,15 @@ public class Coche {
         return color;
     }
 
-    @Override
+    public String getMarca() {
+		return marca;
+	}
+
+	@Override
     public String toString() {
         return "ID: " + id +
                 ", Matrícula: " + matricula + 
+                ", Marca: " + marca +
                 ", Modelo: " + modelo + 
                 ", Color: " + color;
     }

@@ -66,14 +66,18 @@ public class Metodos {
             if (existe) {
                 System.out.println("\nLa matrícula introducida ya existe. No puede añadirse el coche.\n");
             } else {
+
+                System.out.print("\nIntroduce la marca: ");
+                String marca = lector.nextLine();
+            	
                 System.out.print("\nIntroduce el modelo: ");
                 String modelo = lector.nextLine();
-
+                
                 System.out.print("\nIntroduce el color: ");
                 String color = lector.nextLine();
 
                 // Una vez tiene todos los datos, crea un objeto de tipo coche con los mismos y lo añade al ArrayList.
-                Coche coche = new Coche(id, matricula, modelo, color);
+                Coche coche = new Coche(id, matricula, marca, modelo, color);
                 listaCoches.add(coche);
                 System.out.println("\n\nCOCHE AÑADIDO CON ÉXITO.\n");
             }
@@ -163,6 +167,9 @@ public class Metodos {
         	escritor.write("Matrícula");
         	escritor.write(";");
         	
+        	escritor.write("Marca");
+        	escritor.write(";");
+        	
         	escritor.write("Modelo");
         	escritor.write(";");
         	
@@ -180,6 +187,9 @@ public class Metodos {
                 escritor.write(c.getMatricula());
                 escritor.write(";");
 
+                escritor.write(c.getMarca());
+                escritor.write(";");
+                
                 escritor.write(c.getModelo());
                 escritor.write(";");
 
@@ -205,6 +215,7 @@ public class Metodos {
             for(Coche c: listaCoches){
                 escritor.writeInt(c.getId());
                 escritor.writeUTF(c.getMatricula());
+                escritor.writeUTF(c.getMarca());
                 escritor.writeUTF(c.getModelo());
                 escritor.writeUTF(c.getColor());
             }
@@ -234,10 +245,11 @@ public class Metodos {
                     try {
                         int id = lector.readInt();
                         String matricula = lector.readUTF();
+                        String marca = lector.readUTF();
                         String modelo = lector.readUTF();
                         String color = lector.readUTF();
 
-                        Coche coche = new Coche(id, matricula, modelo, color);
+                        Coche coche = new Coche(id, matricula, marca, modelo, color);
                         listaCoches.add(coche);
                     } catch (EOFException e1) {
                         eof = true;
