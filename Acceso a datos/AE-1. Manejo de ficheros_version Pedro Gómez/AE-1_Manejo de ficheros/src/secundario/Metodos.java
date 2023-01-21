@@ -20,6 +20,50 @@ public class Metodos {
                 "    5. Exportar coches a archivo CSV.\n" +
                 "    6. Terminar el programa.");
     }
+    
+    // Método que instancia la lista de coches. En caso de que haya un archivo "coches.dat", cargará en dich
+    public static void cargarLista(){
+        // Primero creamos el ArrayList, que en principio estará vacío.
+        listaCoches = new ArrayList<Coche>();
+
+        // Ahora creamos el objeto file.
+        File file = new File("coches.dat");
+
+        // Si el fichero existe, irá leyendo atributos, guardará cada atributo en una variable y después,
+        // creará un objeto con dichos atributos. Finalmente, añadirá el objeto al ArrayList.
+        // Repetirá el proceso hasta que haya leído hasta el final del fichero.
+        if(file.exists()) {
+
+            boolean eof;
+            try (FileInputStream fichero = new FileInputStream("coches.dat");
+                 DataInputStream lector = new DataInputStream(fichero)) {
+                eof = false;
+                while (!eof) {
+                    try {
+                        int id = lector.readInt();
+                        String matricula = lector.readUTF();
+                        String marca = lector.readUTF();
+                        String modelo = lector.readUTF();
+                        String color = lector.readUTF();
+
+                        Coche coche = new Coche(id, matricula, marca, modelo, color);
+                        listaCoches.add(coche);
+                    } catch (EOFException e1) {
+                        eof = true;
+                    } catch (IOException e2) {
+                        System.out.println("Ha ocurrido un error al leer los registros.");
+                        System.out.println(e2.getMessage());
+                        break;
+                    }
+                }
+            } catch (IOException e) {
+                System.out.println("Ha ocurrido un error al leer el fichero");
+                System.out.println(e.getMessage());
+            }
+        }
+        
+        // Si no existe, no pasa nada, porque igualmente tendremos nuestro ArrayList vacío.
+    }
 
     // Método que solicita datos al usuario sobre un coche para añadirlos al arraylist.
     public static void addCoche(){
@@ -84,6 +128,8 @@ public class Metodos {
         }
     }
 
+    // Método que solicita el id al usuario, y en caso de que se encuentre en el ArrayList, utiliza el 
+    // método remove() para eliminar ese objeto del mismo.
     public static void delCoche(){
         // Si el tamaño del ArrayList es 0, eso significa que no hay coches, por lo que es absurdo pedirle
     	// el dato al usuario.
@@ -112,6 +158,7 @@ public class Metodos {
         
     }
 
+    // Método que solicita un id y busca el coche con dicho ID en el ArrayList. De existir, muestra su toString()
     public static void consultCoche(){
     	// Si el tamaño del ArrayList es 0, eso significa que no hay coches, por lo que es absurdo pedirle
     	// el dato al usuario para buscarlo.
@@ -137,6 +184,7 @@ public class Metodos {
         }
     }
 
+    // Método que recorre el ArrayList y muestra los toString de todos los objetos en el mismo.
     public static void listCoches(){
         // Saca el listado de coches en el ArrayList. 
     	// Recorre el ArrayList y va mostrando el toString de cada objeto iterado.
@@ -155,6 +203,7 @@ public class Metodos {
     	
     }
 
+    // Método que exporta la información en el ArrayList a un fichero .csv separado por ";"
     public static void exportCsv(){
         // Exporta la información a un fichero .csv (de no existir, se crea).
         try(FileWriter fichero = new FileWriter("coches.csv");
@@ -206,6 +255,8 @@ public class Metodos {
         }
     }
 
+    // Método que crea el objeto "coches.dat" en caso de no existir o lo sobreescribe en caso de existir con los
+    // datos que están en el ArrayList cargado
     public static void safe(){
         // En el caso de no existir el fichero coches.dat, se crea.
     	// Tanto si existe como si no, carga en dicho fichero (sobreescribiéndolo) los datos del ArrayList en memoria.
@@ -225,48 +276,7 @@ public class Metodos {
         }
     }
     
-    public static void cargarLista(){
-        // Primero creamos el ArrayList, que en principio estará vacío.
-        listaCoches = new ArrayList<Coche>();
-
-        // Ahora creamos el objeto file.
-        File file = new File("coches.dat");
-
-        // Si el fichero existe, irá leyendo atributos, guardará cada atributo en una variable y después,
-        // creará un objeto con dichos atributos. Finalmente, añadirá el objeto al ArrayList.
-        // Repetirá el proceso hasta que haya leído hasta el final del fichero.
-        if(file.exists()) {
-
-            boolean eof;
-            try (FileInputStream fichero = new FileInputStream("coches.dat");
-                 DataInputStream lector = new DataInputStream(fichero)) {
-                eof = false;
-                while (!eof) {
-                    try {
-                        int id = lector.readInt();
-                        String matricula = lector.readUTF();
-                        String marca = lector.readUTF();
-                        String modelo = lector.readUTF();
-                        String color = lector.readUTF();
-
-                        Coche coche = new Coche(id, matricula, marca, modelo, color);
-                        listaCoches.add(coche);
-                    } catch (EOFException e1) {
-                        eof = true;
-                    } catch (IOException e2) {
-                        System.out.println("Ha ocurrido un error al leer los registros.");
-                        System.out.println(e2.getMessage());
-                        break;
-                    }
-                }
-            } catch (IOException e) {
-                System.out.println("Ha ocurrido un error al leer el fichero");
-                System.out.println(e.getMessage());
-            }
-        }
-        
-        // Si no existe, no pasa nada, porque igualmente tendremos nuestro ArrayList vacío.
-    }
+    
 
 
 }

@@ -1,6 +1,8 @@
 package secundario;
 
-public class Coche {
+
+public class Coche{
+	
 	private int id;
     private String matricula, modelo, marca, color;
 
