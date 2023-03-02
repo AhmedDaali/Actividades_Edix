@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autor>
+    <nombre>J.K</nombre>
+    <apellidos>Rowling</apellidos>
+    <fechaNacimiento>31-7-1965</fechaNacimiento>
+    <libros>
+        <libro>
+            <titulo>Harry Potter y la piedra filosofal</titulo>
+            <precio>15.0</precio>
+            <editorial>
+                <nombre>DEBOLSILLO</nombre>
+                <direccion>C/Inventada</direccion>
+            </editorial>
+        </libro>
+        <libro>
+            <titulo>Harry Potter y el cáliz de fuego</titulo>
+            <precio>8.0</precio>
+            <editorial>
+                <nombre>DEBOLSILLO</nombre>
+                <direccion>C/Inventada</direccion>
+            </editorial>
+        </libro>
+        <libro>
+            <titulo>Harry Potter y el prisionero de azkaban</titulo>
+            <precio>15.0</precio>
+            <editorial>
+                <nombre>Salamandra</nombre>
+                <direccion>Poligono La algodonera, 24</direccion>
+            </editorial>
+        </libro>
+    </libros>
+</autor>

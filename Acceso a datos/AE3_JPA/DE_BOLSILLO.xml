@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<editorial>
+    <nombre>DEBOLSILLO</nombre>
+    <direccion>C/Inventada</direccion>
+    <libros>
+        <libro>
+            <titulo>Harry Potter y la piedra filosofal</titulo>
+            <precio>15.0</precio>
+            <autor>
+                <nombre>J.K</nombre>
+                <apellidos>Rowling</apellidos>
+                <fechaNacimiento>31-7-1965</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>Harry Potter y el cáliz de fuego</titulo>
+            <precio>8.0</precio>
+            <autor>
+                <nombre>J.K</nombre>
+                <apellidos>Rowling</apellidos>
+                <fechaNacimiento>31-7-1965</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>Entremeses</titulo>
+            <precio>11.0</precio>
+            <autor>
+                <nombre>Miguel</nombre>
+                <apellidos>De Cervantes</apellidos>
+                <fechaNacimiento>29-09-1547</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>El dia que se perdió la cordura</titulo>
+            <precio>10.0</precio>
+            <autor>
+                <nombre>Javier</nombre>
+                <apellidos>Castillo</apellidos>
+                <fechaNacimiento>23-8-1987</fechaNacimiento>
+            </autor>
+        </libro>
+    </libros>
+</editorial>

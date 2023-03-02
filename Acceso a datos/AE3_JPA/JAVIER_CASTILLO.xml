@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autor>
+    <nombre>Javier</nombre>
+    <apellidos>Castillo</apellidos>
+    <fechaNacimiento>23-8-1987</fechaNacimiento>
+    <libros>
+        <libro>
+            <titulo>La chica de nieve</titulo>
+            <precio>11.0</precio>
+            <editorial>
+                <nombre>Salamandra</nombre>
+                <direccion>Poligono La algodonera, 24</direccion>
+            </editorial>
+        </libro>
+        <libro>
+            <titulo>El juego del alma</titulo>
+            <precio>6.0</precio>
+            <editorial>
+                <nombre>Salamandra</nombre>
+                <direccion>Poligono La algodonera, 24</direccion>
+            </editorial>
+        </libro>
+        <libro>
+            <titulo>El dia que se perdió la cordura</titulo>
+            <precio>10.0</precio>
+            <editorial>
+                <nombre>DEBOLSILLO</nombre>
+                <direccion>C/Inventada</direccion>
+            </editorial>
+        </libro>
+    </libros>
+</autor>

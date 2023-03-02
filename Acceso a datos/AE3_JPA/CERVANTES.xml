@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<autor>
+    <nombre>Miguel</nombre>
+    <apellidos>De Cervantes</apellidos>
+    <fechaNacimiento>29-09-1547</fechaNacimiento>
+    <libros>
+        <libro>
+            <titulo>El quijote</titulo>
+            <precio>29.0</precio>
+            <editorial>
+                <nombre>Salamandra</nombre>
+                <direccion>Poligono La algodonera, 24</direccion>
+            </editorial>
+        </libro>
+        <libro>
+            <titulo>Entremeses</titulo>
+            <precio>11.0</precio>
+            <editorial>
+                <nombre>DEBOLSILLO</nombre>
+                <direccion>C/Inventada</direccion>
+            </editorial>
+        </libro>
+    </libros>
+</autor>
