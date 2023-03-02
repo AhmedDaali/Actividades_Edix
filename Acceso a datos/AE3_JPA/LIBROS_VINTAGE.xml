@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<libreria>
+    <direccion>C/Alcarria, sn</direccion>
+    <libros>
+        <libro>
+            <titulo>Harry Potter y el prisionero de azkaban</titulo>
+            <precio>15.0</precio>
+            <editorial>
+                <nombre>Salamandra</nombre>
+                <direccion>Poligono La algodonera, 24</direccion>
+            </editorial>
+            <autor>
+                <nombre>J.K</nombre>
+                <apellidos>Rowling</apellidos>
+                <fechaNacimiento>31-7-1965</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>El quijote</titulo>
+            <precio>29.0</precio>
+            <editorial>
+                <nombre>Salamandra</nombre>
+                <direccion>Poligono La algodonera, 24</direccion>
+            </editorial>
+            <autor>
+                <nombre>Miguel</nombre>
+                <apellidos>De Cervantes</apellidos>
+                <fechaNacimiento>29-09-1547</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>Entremeses</titulo>
+            <precio>11.0</precio>
+            <editorial>
+                <nombre>DEBOLSILLO</nombre>
+                <direccion>C/Inventada</direccion>
+            </editorial>
+            <autor>
+                <nombre>Miguel</nombre>
+                <apellidos>De Cervantes</apellidos>
+                <fechaNacimiento>29-09-1547</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>El dia que se perdió la cordura</titulo>
+            <precio>10.0</precio>
+            <editorial>
+                <nombre>DEBOLSILLO</nombre>
+                <direccion>C/Inventada</direccion>
+            </editorial>
+            <autor>
+                <nombre>Javier</nombre>
+                <apellidos>Castillo</apellidos>
+                <fechaNacimiento>23-8-1987</fechaNacimiento>
+            </autor>
+        </libro>
+    </libros>
+    <nombre>Libros Vintage</nombre>
+    <nombreDueño>Ramon Alguacil</nombreDueño>
+</libreria>
