@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<libreria>
+    <direccion>C/Sin nombre, 8</direccion>
+    <libros>
+        <libro>
+            <titulo>Harry Potter y la piedra filosofal</titulo>
+            <precio>15.0</precio>
+            <editorial>
+                <nombre>DEBOLSILLO</nombre>
+                <direccion>C/Inventada</direccion>
+            </editorial>
+            <autor>
+                <nombre>J.K</nombre>
+                <apellidos>Rowling</apellidos>
+                <fechaNacimiento>31-7-1965</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>Harry Potter y el cáliz de fuego</titulo>
+            <precio>8.0</precio>
+            <editorial>
+                <nombre>DEBOLSILLO</nombre>
+                <direccion>C/Inventada</direccion>
+            </editorial>
+            <autor>
+                <nombre>J.K</nombre>
+                <apellidos>Rowling</apellidos>
+                <fechaNacimiento>31-7-1965</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>La chica de nieve</titulo>
+            <precio>11.0</precio>
+            <editorial>
+                <nombre>Salamandra</nombre>
+                <direccion>Poligono La algodonera, 24</direccion>
+            </editorial>
+            <autor>
+                <nombre>Javier</nombre>
+                <apellidos>Castillo</apellidos>
+                <fechaNacimiento>23-8-1987</fechaNacimiento>
+            </autor>
+        </libro>
+        <libro>
+            <titulo>El juego del alma</titulo>
+            <precio>6.0</precio>
+            <editorial>
+                <nombre>Salamandra</nombre>
+                <direccion>Poligono La algodonera, 24</direccion>
+            </editorial>
+            <autor>
+                <nombre>Javier</nombre>
+                <apellidos>Castillo</apellidos>
+                <fechaNacimiento>23-8-1987</fechaNacimiento>
+            </autor>
+        </libro>
+    </libros>
+    <nombre>Libros Baratos</nombre>
+    <nombreDueño>Jose Antonio</nombreDueño>
+</libreria>
